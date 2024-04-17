@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validación de formulario</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulario de Registro</h1>
+
+  <form id="myForm" onsubmit="return validateForm()">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" >
+    <span id="nameError" class="error"></span>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <span id="emailError" class="error"></span>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" required>
+    <span id="passwordError" class="error"></span>
+
+    <label for="confirmPassword">Confirmar Contraseña:</label>
+    <input type="password" id="confirmPassword" required>
+    <span id="confirmPasswordError" class="error"></span>
+
+    <input type="submit" value="Enviar">
+  </form>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
+      var nameError = document.getElementById('nameError');
+      var emailError = document.getElementById('emailError');
+      var passwordError = document.getElementById('passwordError');
+      var confirmPasswordError = document.getElementById('confirmPasswordError');
+
+      nameError.textContent = '';
+      emailError.textContent = '';
+      passwordError.textContent = '';
+      confirmPasswordError.textContent = '';
+
+      if (name === '') {
+        nameError.textContent = 'Por favor, ingresa tu nombre.';
+        return false;
+      }
+
+      if (email === '') {
+        emailError.textContent = 'Por favor, ingresa tu email.';
+        return false;
+      }
+
+      if (password === '') {
+        passwordError.textContent = 'Por favor, ingresa tu contraseña.';
+        return false;
+      }
+
+      if (confirmPassword === '') {
+        confirmPasswordError.textContent = 'Por favor, confirma tu contraseña.';
+        return false;
+      }
+      if (password.length < 8) {
+         passwordError.textContent = 'La contraseña debe tener al menos 8 caracteres.';
+         return false;
+      }
+
+     if (password.length > 20) {
+         passwordError.textContent = 'La contraseña no puede tener más de 20 caracteres.';
+         return false;
+      }
+
+      if (password !== confirmPassword) {
+        confirmPasswordError.textContent = 'Las contraseñas no coinciden.';
+        return false;
+      }
+
+    // Validación de combinación de caracteres alfanuméricos y especiales
+      var passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@#$%^&!¡?¿*+-]).*$/;
+        if (!passwordRegex.test(password)) {
+            passwordError.textContent = 'La contraseña debe contener al menos una letra, un número y un carácter especial.';
+        return false;
+        }
+      // Puedes agregar más validaciones aquí para otros campos según tus necesidades
+
+      return true;
+    }
+  </script>
+</body>
+</html>

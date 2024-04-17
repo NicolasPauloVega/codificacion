@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <script>
+
+        function saludo(nombre){
+            document.write('Hola, Buen dia ' + nombre + '<br>');
+        }
+
+        function suma(nro1,nro2){
+            var total = nro1 + nro2 ;
+           
+            return total;
+        }
+        
+        var nombre1 = prompt('Registre su nombre ?');
+        saludo(nombre1);
+        var valor = suma(10,20);
+        document.write(valor + '<br>' + '<br>');
+        function numeromaximo(nro1,nro2){
+            if(nro1 > nro2){
+                return nro1 ;
+            }
+            return nro2;
+        }
+        var mayor = numeromaximo(30,50);
+        document.write('El numero mayor es ---> ' + mayor + '<br>')
+
+
+
+    </script>
+    
+</body>
+</html>

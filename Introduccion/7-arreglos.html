@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos</title>
+</head>
+<body>
+    <script>
+
+        var amigos = ['Carlos','Alejandro','Cesar',50, true] ;
+        //amigos[0] = "Arturo";
+        document.write(amigos + '<br>');
+        //document.write(amigos[0]);
+        //document.write(amigos.length+'<br>');
+        document.write("Tienes " + amigos.length + " amigos." + "<br>");
+        amigos.push('otro');  //adicionar elementos del arreglo
+        document.write("Tienes " + amigos.length + " amigos." + "<br>");
+        amigos.pop();  //eliminar el ultimo elemento del arreglo
+        document.write("Tienes " + amigos.length + " amigos." + "<br>");
+
+        var amigos2 = ['Jorge','Santiago','Julian'] ;
+        var amigos3 = amigos.concat(amigos2);
+        document.write(amigos3);
+        var amigos2 = amigos.join(' * ');
+        document.write(amigos2);
+
+        var ordenados = amigos.sort();
+        document.write(ordenados);
+        
+    </script>
+    
+</body>
+</html>

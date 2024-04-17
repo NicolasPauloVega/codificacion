@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario validacion</title>
+</head>
+<body>
+    <form action="" name="formulario" method="get">
+    <input type="text" name="nombre" id="nombre" maxlength="38" placeholder="nombre-->">
+    <br>
+
+    <input type="radio" name="genero" id="hombre" value="hombre">hombre
+    <input type="radio" name="genero" id="mujer" value="mujer">mujer
+    <br><br>
+
+    <input type="checkbox" name="terminos" id="terminos">terminos y condiciones
+    <br><br>
+
+    <input type="submit" id="boton" name="boton" value="enviar">
+    </form>
+    <script>
+        (function(){
+            var formulario = document.getElementsByName('formulario')[0],
+            elementos=formulario.elements,
+            boton = document.getElementById('boton')
+
+            var validarnombre = function(e){
+                if (formulario.nombre.value == 0){
+                    alert('por favor complete el campo nombre')
+                    e.preventDefault()
+                }
+            }
+
+            var validarradio = function(e){
+                if(formulario.genero[0].checked == true || formulario.genero[1].checked == true){
+                }else{
+                    alert('por favor seleccione una opcion del campo')
+                    e.preventDefault()
+                }
+            }
+            
+        var validarcheckbox = function(e){
+            if(formulario.terminos.checked == false){
+                alert('por favor valide el campo terminos')
+                e.preventDefault()
+            }
+        }
+
+            var validar = function(e){
+                validarnombre(e)
+                validarradio(e)
+                validarcheckbox(e)
+            }
+        formulario.addEventListener("submit",validar)
+    }())
+    </script>
+</body>
+</html>

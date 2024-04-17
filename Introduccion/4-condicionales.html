@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <script>
+        var nombre = prompt("Cual es tu Nombre? "), edad=prompt("Cual es tu Edad? ");
+
+        //>   mayor que
+        //<   menor que
+        //>=  mayor o igual  
+        //<=  menor o igual
+        //==  igual
+        //=== igual en valor y tipo
+        //!=  diferente
+        //&&  and (Y)
+        //||  or (O)
+
+         
+        if(nombre=='William'){
+            document.write('Bienvenido ' + nombre + "<br>");
+        }else if(edad > 20){
+            document.write('Bienvenido Anonimo' + "<br>");
+        }else{
+            document.write('No puede ingresar al sitio' + "<br>"); 
+        }
+        if(nombre){
+            document.write('OK' + "<br>");
+        }else{
+            document.write('ERROR' + "<br>");
+        }
+        //edad = 18;
+        if(edad === '18'){
+            document.write('OK' + "<br>");
+        }else{
+            document.write('ERROR'+ "<br>");
+        }
+        
+    </script>
+    
+</body>
+</html>
