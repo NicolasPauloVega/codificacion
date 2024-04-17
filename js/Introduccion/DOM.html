@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Titulo Principal</h1>
+    <div id="subtitulo"></div>
+    <p>
+        1- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia quidem ut officiis facilis amet quos, ex tempora perspiciatis aperiam quo, nobis ipsa, nisi quae quod sapiente laborum at quibusdam corrupti!
+    </p>
+    <p id="segundo">
+        2- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia quidem ut officiis facilis amet quos, ex tempora perspiciatis aperiam quo, nobis ipsa, nisi quae quod sapiente laborum at quibusdam corrupti!
+    </p>
+    <p>
+        3- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia quidem ut officiis facilis amet quos, ex tempora perspiciatis aperiam quo, nobis ipsa, nisi quae quod sapiente laborum at quibusdam corrupti!
+    </p>
+
+    <script>
+        let elementosp = document.getElementsByTagName('p');
+        let segundop = document.getElementById('segundo');
+
+        //1-crear el elemento
+        let elemento = document.createElement("h2");
+        //2-Crear un nodo de texto
+        let contenido = document.createTextNode("Este es el sub-titular");
+        //3- Anadir el nodo de texto al elemento
+        elemento.appendChild(contenido);
+        //4- Agregar atributos al elemento
+        elemento.setAttribute("alingn", "center");
+        //5- Agregar el elemento al documento
+        document.getElementById("subtitulo").appendChild(elemento);
+    </script>
+</body>
+</html>

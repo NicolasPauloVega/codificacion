@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos y propiedades</title>
+</head>
+<body>
+    <script>
+        let texto = "William Orlando";
+        let longitud = texto.length;
+        let nuevoTexto = texto.substring(5);
+        let sustraer = texto.substr(0,7);
+        let posicion = texto.indexOf('0');
+        let posicion2 = texto.indexOf('a', 9);
+        let textoreplace = texto.replace(texto, "Instructor");
+        let textoreplace2 = texto.replace('Orlando', "Instructor");
+        let mayusculas = texto.toLocaleUpperCase();
+        let minusculas = texto.toLocaleLowerCase();
+
+        document.write(longitud + '<br>');
+        document.write(nuevoTexto + '<br>');
+        document.write(sustraer + '<br>');
+        document.write(posicion + '<br>');
+        document.write(posicion2 + '<br>');
+        document.write(textoreplace + '<br>');
+        document.write(textoreplace2 + '<br>');
+        document.write(mayusculas + '<br>');
+        document.write(minusculas + '<br>');
+    </script>
+</body>
+</html>
