@@ -9,7 +9,7 @@ function aleatorio(min, max) {
 
     //Creamos un siclo que se ejecute siempre y cuando la longitud del array sea menor que el numero colocado por el usuario.
     while (array.length < numero) {
-        array.push(Math.floor(101*Math.random()));//Genera numeros enteros (Math.floor redondea al numero entero mas sercano) aleatorios entre el 0 y el 100
-        document.getElementById("resultado").innerHTML="El resultado de los numeros escogidos de manera aleatoria son: " + array; //Mostramos el resultado deseado en pantalla.
+        array.push(Math.round(0 || 101 * Math .random()));//Genera numeros enteros (Math.round redondea al numero entero mas sercano) aleatorios entre el 0 y el 100
+        document.getElementById("resultado").innerHTML = "El resultado de los numeros escogidos de manera aleatoria son: " + array; //Mostramos el resultado deseado en pantalla.
     }
 }

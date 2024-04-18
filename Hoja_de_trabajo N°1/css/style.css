@@ -164,3 +164,17 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
+#contenedor .numero-aleatorio {
+    text-align: center;
+}
+
+#contenedor .numero-aleatorio button {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
