@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PI</title>
     <link rel="stylesheet" href="../css/style.css">
+    <title>Numero Aleatorio</title>
 </head>
 <body>
     <div id="navegador">
@@ -22,16 +22,18 @@
     </div>
 
     <div id="contenedor">
-        <h1>PI con precisión</h1><br>
+        <h1>Numero Aleatorio</h1>
+        <p>Crea una función que genere número entero aleatorio entre min y máx., que serán pasados como parámetros. Por defecto min = 1 y máx. = 100</p>
 
-        <p>Crea una función que devuelva el número PI con dos decimales. Utiliza la variable PI que ya existe en JavaScript.</p><br>
-    
-        <h2>Solucion: </h2><br>
-        <p>PI con dos decimales</p><br>
-        <button onclick="PI_Decimales();">Consultar</button><br><br>
+        <p>Indica la cantidad de números que deseas mostrar.</p>
+
+        <input type="number" id="nro1" placeholder="Ingresa el numero">
+
+        <button type="button" onclick="aleatorio()">Consultar</button>
+
         <p><strong id="resultado"></strong></p>
     </div>
-    
-    <script src="../js/PI.js"></script>
+    <script src="../js/numero_aleatorio.js"></script>
+
 </body>
 </html>

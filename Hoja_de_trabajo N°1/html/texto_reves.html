@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PI</title>
     <link rel="stylesheet" href="../css/style.css">
+    <title>Texto al revés</title>
 </head>
 <body>
     <div id="navegador">
@@ -22,16 +22,18 @@
     </div>
 
     <div id="contenedor">
-        <h1>PI con precisión</h1><br>
+        <h1>Texto al revés</h1>
+        <P>Crea una función que reciba un texto y lo devuelva al revés </P>
 
-        <p>Crea una función que devuelva el número PI con dos decimales. Utiliza la variable PI que ya existe en JavaScript.</p><br>
-    
-        <h2>Solucion: </h2><br>
-        <p>PI con dos decimales</p><br>
-        <button onclick="PI_Decimales();">Consultar</button><br><br>
-        <p><strong id="resultado"></strong></p>
+        <strong class="texto"><label for="">Ingresa algun texto: </label></strong>
+        <input type="text" id="texto">
+
+        <div class="texto-boton">
+            <button type="button" class="texto-boton" onclick="reversa()">Mostrar el resultado.</button>
+        </div>
+
+        <p class="texto-resultado"><strong id="texto-resultado"></strong></p>
     </div>
-    
-    <script src="../js/PI.js"></script>
+    <script src="../js/texto_reves.js" class="texto"></script>
 </body>
 </html>

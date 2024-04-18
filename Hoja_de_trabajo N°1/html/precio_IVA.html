@@ -14,36 +14,30 @@
                 <li><a href="../html/index.html">Inicio</a></li>
                 <li><a href="../html/PI.html">Pi con precisión</a></li>
                 <li><a href="../html/precio_IVA.html">Precio con IVA</a></li>
-                <li><a href="#">Texto al revés</a></li>
-                <li><a href="#">Número aleatorio</a></li>
-                <li><a href="#">Números únicos</a></li>
+                <li><a href="../html/texto_reves.html">Texto al revés</a></li>
+                <li><a href="../html/numero_aleatorio.html">Número aleatorio</a></li>
+                <li><a href="../html/numero_unico.html">Números únicos</a></li>
             </ul>
         </nav>
     </div>
 
     <div id="contenedor">
         <h1>Precio con IVA</h1>
-        <P>2- Crea una función que reciba 2 parámetros, precio e IVA, y devuelva el precio con IVA incluido. Si no recibe el IVA, aplicará el 19 por ciento por defecto.</P>
+        <P>Crea una función que reciba 2 parámetros, precio e IVA, y devuelva el precio con IVA incluido. Si no recibe el IVA, aplicará el 19 por ciento por defecto.</P>
 
-        <form action="" name="formulario" method="GET">
-            <label for="platos">Selecciona el plato que desee:</label>
-            <select id="comida">
-                <option value="0"></option>
-                <option value="10.99">Costillas de cerdo con vino tinto ($10.99)</option>
-                <option value="25.90">Salmon con trigueros y judias blancas ($25.90)</option>
-                <option value="10.75">Pasta con salmon a la mostaza ($10.75)</option>
-                <option value="15.25">Pierna de cordero al horno ($15.25)</option>
-                <option value="12.50">Muslos de pavo con verduras y patatas asadas ($12.50)</option>
-            </select>
-            <label for="cantidad-platos">¿Cuantos platos desea? </label>
-            <input type="number" id="n1" min="0.00" placeholder="PRECIO" step="0.01">
-            <label for="IVA">¿De cuanto es el IVA?</label>
-            <input type="number" id="n2" min="0.00" placeholder="IVA" step="0.01">
-
-            <button onclick="">Total</button>
+        <form action="" method="GET">
+            <strong><label for="">Ingresa el valor del producto</label></strong>
+            <input type="number" id="nro1" placeholder="Valor del producto">
+    
+            <strong><label for="">Ingresa el valor del IVA del producto</label></strong>
+            <input type="number" id="nro2" placeholder="Valor del IVA">
+    
+            <button type="button" onclick="calcular()">Total</button>
         </form>
 
         <p><strong id="total"></strong></p>
     </div>
+
+    <script src="../js/total_iva.js"></script>
 </body>
 </html>

@@ -58,12 +58,13 @@ body {
     margin-bottom: 20px;
 }
 
-#contenedor {
-    margin-bottom: 30px;
+#contenedor strong {
+    font-size: 1.15em;
 }
 
 #contenedor p {
     margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 #contenedor button {
@@ -80,3 +81,75 @@ body {
     background-color: #0f5ba7;
 }
 
+#contenedor form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contenedor form strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contenedor form input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#contenedor form button {
+    width: 50%;
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contenedor form button:hover {
+    background-color: #0f5ba7;
+}
+
+#total {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#contenedor .texto {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#contenedor .texto-boton {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contenedor .texto-resultado {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#contenedor input[type="number"],input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}

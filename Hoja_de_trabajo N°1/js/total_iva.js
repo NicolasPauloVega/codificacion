@@ -1,4 +1,14 @@
-function resultado(n1, n2=0.9) {
-    let calculo = n1 * (1+n2);
-    document.getElementById("total").innerHTML = "El total por el producto es de "+calculo;
+function calcular(nro1, nro2) {
+    nro1 = parseFloat( document.getElementById("nro1").value );
+    nro2 = parseFloat( document.getElementById("nro2").value );
+
+    var iva = nro2 / 100;
+
+    if (nro2 > 0) {
+        var calculo = nro1 * iva;
+    } else {
+        var calculo = nro1 * 0.19;
+    }
+
+    document.getElementById("total").innerHTML = "El total por el producto es de $" + calculo;
 }
