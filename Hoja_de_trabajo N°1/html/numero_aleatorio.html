@@ -27,9 +27,11 @@
 
         <p>Indica la cantidad de números que deseas mostrar.</p>
 
-        <input type="number" id="nro1" placeholder="Ingresa el numero">
+        <input type="number" id="nro1" placeholder="Ingresa el numero" min="0">
 
-        <button type="button" onclick="aleatorio()">Consultar</button>
+        <div class="random-boton">
+            <button type="button" onclick="aleatorio()">Consultar</button>
+        </div>
 
         <p><strong id="resultado"></strong></p>
     </div>
