@@ -1,7 +1,7 @@
 let contar = 0;
 let bnt = document.getElementById("btn-1");
 let btn1 = document.getElementById("btn-2");
-var conteo = document.getElementById("resultado");
+// var conteo = document.getElementById("resultado");
 
 bnt.addEventListener("click", printClick);
 
