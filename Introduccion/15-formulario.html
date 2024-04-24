@@ -20,40 +20,51 @@
     <input type="submit" id="boton" name="boton" value="enviar">
     </form>
     <script>
+        // Inicia una función anónima que se ejecuta inmediatamente
         (function(){
+            // Obtiene el formulario y sus elementos
             var formulario = document.getElementsByName('formulario')[0],
-            elementos=formulario.elements,
-            boton = document.getElementById('boton')
+                elementos = formulario.elements,
+                boton = document.getElementById('boton');
 
+            // Función para validar el campo de nombre
             var validarnombre = function(e){
+                // Si el campo de nombre está vacío, muestra una alerta y previene el envío del formulario
                 if (formulario.nombre.value == 0){
-                    alert('por favor complete el campo nombre')
-                    e.preventDefault()
+                    alert('por favor complete el campo nombre');
+                    e.preventDefault();
                 }
-            }
+            };
 
+            // Función para validar los campos de radio
             var validarradio = function(e){
+                // Si ninguno de los botones de radio está seleccionado, muestra una alerta y previene el envío del formulario
                 if(formulario.genero[0].checked == true || formulario.genero[1].checked == true){
                 }else{
-                    alert('por favor seleccione una opcion del campo')
-                    e.preventDefault()
+                    alert('por favor seleccione una opcion del campo');
+                    e.preventDefault();
                 }
-            }
-            
-        var validarcheckbox = function(e){
-            if(formulario.terminos.checked == false){
-                alert('por favor valide el campo terminos')
-                e.preventDefault()
-            }
-        }
+            };
+        
+            // Función para validar la casilla de verificación
+            var validarcheckbox = function(e){
+                // Si la casilla de verificación no está marcada, muestra una alerta y previene el envío del formulario
+                if(formulario.terminos.checked == false){
+                    alert('por favor valide el campo terminos');
+                    e.preventDefault();
+                }
+            };
 
+            // Función principal que llama a las funciones de validación
             var validar = function(e){
-                validarnombre(e)
-                validarradio(e)
-                validarcheckbox(e)
-            }
-        formulario.addEventListener("submit",validar)
-    }())
+                validarnombre(e);
+                validarradio(e);
+                validarcheckbox(e);
+            };
+
+            // Agrega un event listener al formulario que llama a la función de validación cuando se envía
+            formulario.addEventListener("submit", validar);
+        }());
     </script>
 </body>
 </html>
