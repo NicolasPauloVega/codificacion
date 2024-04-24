@@ -1,0 +1,88 @@
+/* Restablecer estilos predeterminados */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para el cuerpo de la página */
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    width: 70%;
+    padding: 40px;
+    background-color: rgb(203, 201, 201);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Contenedor principal (h1) */
+  .container h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+  
+  /* Formulario */
+  .form {
+    background-color: grey;
+    padding: 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 50%;
+    margin: 0px auto;
+  }
+  
+  /* Etiquetas de los campos */
+  label {
+    font-weight: bold;
+  }
+  
+  /* Campos de texto */
+  input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Botón de envío */
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Efecto hover para el botón de envío */
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Lista de tareas */
+  #list-task {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Elementos de la lista de tareas */
+  #list-task li {
+    background-color: #f9f9f9;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    width: 50%;
+    margin: 0px auto;
+  }
+  
