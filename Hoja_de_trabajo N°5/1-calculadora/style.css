@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-image: url(https://soyhorizonte.com/wp-content/uploads/2020/10/JS-by-SoyHorizonte.gif);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+#calculator {
+    width: 300px;
+    margin: 50px auto;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 0px auto;
+    margin-top: 138px;
+}
+  
+.operands {
+    display: block;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+  
+.operands div {
+    font-size: 24px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    justify-content: right;
+    text-align: right;
+}
+  
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+  
+button {
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: #ccc;
+}
+  
+.AC {
+    grid-column: span 2;
+    background-color: #ff6666;
+    color: #fff;
+}
+  
+.delete {
+    background-color: #ff6666;
+    color: #fff;
+}
+  
+.operation {
+    background-color: #f0c040;
+}
+  
+.number {
+    background-color: #e0e0e0;
+}
+  
+.zero {
+    background-color: #e0e0e0;
+    grid-column: span 2;
+}
+  
+.spot {
+    background-color: #e0e0e0;
+}
+  
+[data-equals] {
+    background-color: #4caf50;
+    color: #fff;
+}
+  
