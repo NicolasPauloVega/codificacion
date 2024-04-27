@@ -1,26 +1,30 @@
-//Creamos una variable que tome de referencio el contenedor (div) con la clase clock pues sera donde se encontrara el reloj
-const clock = document.querySelector(".clock");
+//Se crea una funcion llamada "currentTime()" la cual nos ayudará mostrar la hora en la pagina.
+function currentTime() {
+    //Creamo una variable let que nos permite capturar la hora y la fecha actual.
+    let date = new Date();
+    //Creamos 3 variables let "hh,mm,ss" que nos permite tomar la hora, los minutos y los segundos de la fecha actual.
+    let hh = date.getHours();
+    let mm = date.getMinutes();
+    let ss = date.getSeconds();
 
-//Vamos a crear una funcion llamada tick.
-function tick() {
-    //Creamos una variable la cual nos permita llamar al contructor new date
-    const now = new Date();
+    // Creamos una condicion para horas la cual si el numero es menor que 10 entonces se concatena un "0" esto nos permite que el numero no sea superior a 2 digitos y se aplica para la variable hh o hora.
+    hh = (hh < 10) ? "0" + hh : hh;
 
-    //variable para almacenar la hora
-    const hour = now.getHours();
-    //variable para almacenar los minutos
-    const minute = now.getMinutes();
-    //variable para almacenar los segundos
-    const second = now.getSeconds();
+    // Creamos una condicion para minutos la cual si el numero es menor que 10 entonces se concatena un "0" esto nos permite que el numero no sea superior a 2 digitos y se aplica para la variable mm o minutos.
+    mm = (mm < 10) ? "0" + mm : mm;
 
-    //console.log(hour,minute,second); //se comprueba si funciona
+    // Creamos una condicion para segundos la cual si el numero es menor que 10 entonces se concatena un "0" esto nos permite que el numero no sea superior a 2 digitos y se aplica para la variable ss o segundos.
+    ss = (ss < 10) ? "0" + ss : ss;
 
-    //Creamos una etiqueta html (<span>) la cual almacena los valores de las variables hour, minute y second
-    const html = `<span>${hour}</span> : <span>${minute}</span> : <span>${second}</span>`;
-    
-    //Finalmente lo mostramos en el contenedor.
-    clock.innerHTML = html;
+    //Creamos una varibale la cual almacena una cadena de texto con el formato de hora,minutos y segundos (h:m:s)
+    let time = hh + ":" + mm + ":" + ss;
+
+    //Creamos una variable la cual busca el valor del html que tenga el id "watch"
+    let watch = document.querySelector("#watch");
+
+    //Finalmente actualizamos el contenido del html "watch" y lo mostramos en la pagina tomando los valores de la variable "time"
+    watch.innerHTML = time;
 }
 
-//Usamos el metodo serInterval para poder llamar la funcion.
-setInterval(tick, 1000); //Colocamos como primer paramatro la funcion tick y como segundo para metro 1000 que representan los milisigundos lo que se hace es que se repita la funcion cada segundo.
+//Utilizamos la funcion setInterval para actualizar la funcion "currentTime()" cada segundo.
+setInterval(currentTime, 1000);
