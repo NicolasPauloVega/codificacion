@@ -163,3 +163,19 @@ main {
     cursor: pointer;
 }
 
+#input-container {
+    color: white;
+}
+
+.time-container {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border: 1px solid red;
+    color: red;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
