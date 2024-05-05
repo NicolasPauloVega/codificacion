@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reloj</title>
+</head>
+<body>
+    <h1>Actividad (Hoja De Trabajo N°5)</h1><br>
+
+    <h2>Reloj</h2><br>
+    
+    <div id="reloj" class="reloj"></div><br>
+
+    <script src="../2-Reloj/js/reloj.js"></script>
+
+    <hr>
+
+    <h2>Cronometro</h2><br>
+    
+    <div class="cronometro">
+
+        <h2 id="tiempoTranscurrido"></h2>
+
+        <button id="btnIniciar">Iniciar</button>
+        <button id="btnPausar">Pausar</button>
+        <button id="btnMarca">Grabar</button>
+        <button id="btnDetener">Detener</button>
+        
+        <div id="contenedorMarcas"></div>
+
+    </div><br>
+
+    <script src="../2-Reloj/js/cronometro.js"></script>
+
+    <hr>
+
+    <h2>Temporizador</h2><br>
+
+    <div class="temporizador">
+        <div id="contenedorInputs">
+
+            <div class="field">
+                <label class="label">Minutos</label>
+                <div class="control">
+                    <input class="input" id="minutos" type="number" placeholder="Minutos">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Segundos</label>
+                <div class="control">
+                    <input class="input" id="segundos" type="number" placeholder="Segundos">
+                </div>
+            </div><br>
+
+            <h2 id="tiempoRestante">00:00.0</h2>
+
+            <button id="btn-iniciar">Iniciar</button>
+            <button id="btn-pausar">Pausar</button>
+            <button id="btn-detener">Detener</button>
+
+        </div>
+    </div><br>
+
+    <script src="../2-Reloj/js/temporizador.js"></script>
+</body>
+</html>
