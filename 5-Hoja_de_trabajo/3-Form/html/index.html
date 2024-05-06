@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Se utiliza la palabra clave defer prepara al DOM para cargarlo antes de la pagina -->
+    <script defer src="../js/script.js"></script>
+    <title>Registro</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="/">
+            <h1>Registrarse</h1>
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input name="email" id="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password2">Password again</label>
+                <input type="text" id="password2" name="password">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+</body>
+</html>
