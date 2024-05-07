@@ -1,6 +1,6 @@
 setInterval(
     () => {
-        var reloj = document.getElementById("reloj"); // Traemos todos los valores que hay en la clase llamada reloj
+        var reloj = document.getElementById("reloj"); // Traemos todos los valores que hay en la id llamada reloj
         
         var tiempo_actual = new Date(); // Tomamos El valor de la fecha actual e tiempo actual.
 
@@ -8,6 +8,7 @@ setInterval(
         var hora = tiempo_actual.getHours();
         var minutos = tiempo_actual.getMinutes();
         var segundos = tiempo_actual.getSeconds();
+
 
         // Cremos una condicion para agregar 1 cero al momento de llegar al numero sea menor que 10.
 
@@ -25,5 +26,6 @@ setInterval(
 
         // Mostramos las horas, segundos y minutos actuales
         reloj.innerHTML = `${hora}:${minutos}:${segundos}`;
+
     }, 1000
 );
