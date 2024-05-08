@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca</title>
+    <style>
+        /* Estilo del contenedor principal */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Estilo de los contenedores de información (libro y usuario) */
+        .info {
+            width: 48%;  /* El contenedor ocupará el 48% del ancho */
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para los botones */
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Contenedor de información del libro -->
+        <div class="info">
+            <h2>Información del Libro</h2>
+            <!-- Campo para ingresar el título del libro -->
+            <label for="libro-titulo"><strong>Título:</strong></label>
+            <input type="text" id="libro-titulo" />
+            <br><br>
+            <!-- Campo para ingresar el autor del libro -->
+            <label for="libro-autor"><strong>Autor:</strong></label>
+            <input type="text" id="libro-autor" />
+            <br><br>
+            <!-- Campo para ingresar el número de páginas del libro -->
+            <label for="libro-paginas"><strong>Páginas:</strong></label>
+            <input type="number" id="libro-paginas" />
+            <br><br>
+            <!-- Botón para agregar el libro -->
+            <button onclick="agregarLibro()">Agregar Libro</button>
+        </div>
+
+        <!-- Contenedor de información del usuario -->
+        <div class="info">
+            <h2>Información del Usuario</h2>
+            <!-- Campo para ingresar el nombre del usuario -->
+            <label for="usuario-nombre"><strong>Nombre:</strong></label>
+            <input type="text" id="usuario-nombre" />
+            <br><br>
+            <!-- Campo para ingresar la edad del usuario -->
+            <label for="usuario-edad"><strong>Edad:</strong></label>
+            <input type="number" id="usuario-edad" />
+            <br><br>
+            <!-- Sección para mostrar la lista de libros prestados -->
+            <p><strong>Libros Prestados:</strong></p>
+            <ul id="usuario-libros"></ul>
+        </div>
+    </div>
+
+    <script src="app.js"> 
+    </script>
+</body>
+
+</html>
