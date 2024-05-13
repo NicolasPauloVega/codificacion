@@ -88,29 +88,33 @@ class Gestor_empleado {
     actualizar_empleado() {
         // Obtenemos el índice del empleado en edición
         const indice = this.editar_indice;
-
+      
         // Obtenemos los nuevos valores de los campos del formulario
+        const nuevoNombre = document.getElementById('nombre').value;
         const nuevoCargo = document.getElementById('cargo').value;
-
-        // Actualizamos solo el campo de cargo del empleado en la lista
+        const nuevaEdad = parseInt(document.getElementById('edad').value);
+      
+        // Actualizamos los valores de las propiedades del empleado en la lista
+        this.empleados[indice].nombre = nuevoNombre;
         this.empleados[indice].cargo = nuevoCargo;
-
+        this.empleados[indice].edad = nuevaEdad;
+      
         // Limpiamos los campos del formulario
         document.getElementById('nombre').value = '';
         document.getElementById('cargo').value = '';
         document.getElementById('edad').value = '';
-
+      
         // Restauramos el estado inicial de edición
         this.editar_indice = null;
-
+      
         // Mostramos nuevamente la lista de empleados actualizada
         this.mostrar_empleado();
-
+      
         // Mostramos y ocultamos los botones de agregar y editar
         document.getElementById('agregar-boton').style.display = 'inline';
         document.getElementById('editar-boton').style.display = 'none';
         document.getElementById('cancelar-boton').style.display = 'none';
-    }
+    }      
 
     // Creamos un metodo el cual se encargara de eliminar el empleado indice
     eliminar_empleado(indice) {
