@@ -20,7 +20,14 @@ const server = http.createServer((req, res) => {
         } else {
             // Enviar el contenido del archivo como respuesta HTTP si no ocurrió ningun error
             res.writeHead(200, {'content-Type': 'text/plain'});
-            // Cofigurar el encabezado de la respuesta con el 
+            // Cofigurar el encabezado de la respuesta con el codigo de estado 200 (Éxito) y el tipo de contenido 'text/plain'
+            res.end(data); // Enviar el contenido del archivo como cuerpo de la respuesta
         }
-    })
-})
+    });
+});
+
+// Iniciar el servidor y escuchar en el puerto 8080
+server.listen(8080, () => {
+    console.log('HTTP server listening on port 8080');
+    // Imprimir un mensaje en la consola cuando el servidor empiece a escuchar en el puerto 8080
+});
