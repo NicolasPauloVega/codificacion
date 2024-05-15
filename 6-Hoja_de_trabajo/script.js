@@ -50,6 +50,7 @@ class Gestor_empleado {
         editar_boton.forEach(boton => {
             boton.addEventListener('click', () => {
                 const indice = boton.getAttribute('data-index');
+                console.log(indice)
                 this.editar_empleado(indice);
             });
         });
@@ -72,11 +73,16 @@ class Gestor_empleado {
 
         // Vamos a obtener el valor del empleado que se desea buscar para editar
         const empleado = this.empleados[indice];
+        console.log(empleado)
 
         // Establecer los valores de los campos de entrada del formulario con los valores existentes del empleado
-        document.getElementById('nombre').value = empleado.nombre;
-        document.getElementById('cargo').value = empleado.cargo;
-        document.getElementById('edad').value = empleado.edad;
+        const nombre = document.getElementById('nombre').value = empleado.nombre;
+        const cargo = document.getElementById('cargo').value = empleado.cargo;
+        const edad = document.getElementById('edad').value
+
+       const prueba =  empleado.edad = edad
+
+        console.log(prueba)
 
         // Ahora ocultaremos el boton de agregar y mostraremos los botones de actualizar o editar y el de cancelar por si no se desea editar ese empleado
         document.getElementById('editar-boton').style.display = 'inline';
